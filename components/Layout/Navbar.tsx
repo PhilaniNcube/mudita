@@ -12,11 +12,7 @@ const Navbar = () => {
       href: "/",
       active: router.asPath === "/",
     },
-    {
-      title: "Services",
-      href: "/services",
-      active: router.asPath === "/services",
-    },
+
     {
       title: "About Us",
       href: "/about",

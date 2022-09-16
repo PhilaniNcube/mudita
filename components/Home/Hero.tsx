@@ -50,9 +50,9 @@ const Hero = () => {
                 we offer a holistic approach to each individuals needs
               </p>
 
-              <Link href="/services">
+              <Link href="/about">
                 <a className="px-8 py-2 bg-slate-800 text-gray-100 hover:bg-slate-600 transition-all duration-300 cursor-pointer font-medium uppercase mt-8">
-                  Services
+                  Learn More
                 </a>
               </Link>
             </div>
@@ -115,9 +115,9 @@ const Hero = () => {
                 through education and also providing a safe supportive
                 environment.
               </p>
-              <Link href="/services">
+              <Link href="/about">
                 <a className="px-8  py-2 bg-slate-800 text-gray-100 hover:bg-slate-600 transition-all duration-300 cursor-pointer font-medium uppercase mt-8">
-                  Services
+                  Learn More
                 </a>
               </Link>
             </div>
