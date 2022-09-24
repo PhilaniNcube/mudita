@@ -32,7 +32,7 @@ const Navbar = () => {
 
 
   return (
-    <header className="z-20 bg-white py-2">
+    <header className="z-20 py-2">
       {/**Desktop Navigation Starts**/}
       <nav className="hidden md:flex max-w-7xl mx-auto px-4 justify-between items-center">
         <Link href="/">
@@ -41,7 +41,7 @@ const Navbar = () => {
             width={566.9}
             height={289.9}
             alt="logo"
-            className="w-44 object-cover"
+            className="w-44 lg:w-60 object-cover"
           />
         </Link>
 
@@ -60,7 +60,7 @@ const Navbar = () => {
                     layout
                     transition={{ duration: 0.3 }}
                     className={`uppercase font-medium transition-all duration-500 ${
-                      item.active ? "text-gray-800" : "text-gray-400"
+                      item.active ? "text-brand-main" : "text-gray-400"
                     }`}
                   >
                     {item.title}
