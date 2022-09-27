@@ -12,7 +12,7 @@ const Promise = () => {
         <div className="max-w-7xl mx-auto px-4 py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="w-full md:pl-6 py-3">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold tracking-widest text-slate-800">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold  text-slate-800">
                 Our
                 <span className="text-brand-main lowercase"> Promise</span>
               </h1>{" "}
