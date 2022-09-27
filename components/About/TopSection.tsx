@@ -6,7 +6,7 @@ const TopSection = () => {
     <Fragment>
       <section className="pt-16 pb-12">
         <div className="max-w-7xl mx-auto py-4 px-4 grid grid-cols-2 gap-8 md:gap-x-12">
-          <div>
+          <div className="flex flex-col justify-center">
             {" "}
             <div className="text-slate-700 flex space-x-3 items-center">
               <p className="text-sm md:text-lg md:font-bold font-serif uppercase font-medium">
@@ -18,7 +18,7 @@ const TopSection = () => {
               Project{' '}
                <span className="text-brand-main lowercase">Mission</span>{" "}
             </h1>
-            <p className="text-lg mt-4 text-gray-600 text-justify">
+            <p className="text-lg md:text-xl leading-7 mt-4 text-gray-600 text-justify">
               We have been friends for almost a decade, studying, traveling and
               going on many adventures together. Growing up with very different
               cultural backgrounds (German and South African) we have learned to
@@ -35,7 +35,7 @@ const TopSection = () => {
             </p>
           </div>
 
-          <Image src="/images/friends.jpg" width={1500} height={1000} alt="Friends" className="w-full col-span-2 md:col-span-1 object-cover h-full" />
+          <Image src="/images/lena.jpg" width={1200} height={1436} alt="Friends" className="w-full aspect-square col-span-2 md:col-span-1 object-cover " />
         </div>
       </section>
     </Fragment>
