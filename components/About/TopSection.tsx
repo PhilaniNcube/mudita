@@ -14,8 +14,8 @@ const TopSection = () => {
               </p>{" "}
 
             </div>{" "}
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-widest text-slate-800">
-              Project
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-800">
+              Project{' '}
                <span className="text-brand-main lowercase">Mission</span>{" "}
             </h1>
             <p className="text-lg mt-4 text-gray-600 text-justify">
