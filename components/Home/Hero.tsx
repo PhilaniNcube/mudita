@@ -41,7 +41,7 @@ const Hero = () => {
             <div className="grid grid-cols-2 gap-2">
               <div className="w-full h-full flex flex-col justify-center pr-6">
                 <h1 className="text-3xl md:text-5xl lg:text-[5rem] text-slate-800">
-                  Finding Joy in the <br />
+                  Finding joy in the <br />
                   <span className="text-brand-main font-bold">
                     success of others
                   </span>
