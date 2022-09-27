@@ -35,7 +35,7 @@ const Hero = () => {
 
   return (
     <Fragment>
-      <section className="relative isolate">
+      <section className="relative isolate bg-center bg-no-repeat bg-cover" style={{backgroundImage: 'url(/images/hero_bg.jpg)'}} >
         <div className="">
           <div className="mx-auto max-w-7xl px-4 h-full">
             <div className="grid grid-cols-2 gap-2">
