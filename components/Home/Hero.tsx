@@ -72,9 +72,9 @@ const Hero = () => {
                   : "bg-brand-main text-slate-100"
               }`}
             >
-              <h4 className="text-4xl text-center font-medium">{item.title}</h4>
-              <p className="mt-2 text-xl">{item.subtitle}</p>
-              <ul className="list-disc pl-4">
+              <h4 className="text-4xl font-serif font-bold">{item.title}</h4>
+              <p className="mb-2 text-lg pr-3 leading-5">{item.subtitle}</p>
+              <ul className="list-disc pl-8">
                 {item.points.map((point, i) => (
                   <li key={i} className="text-sm font-medium py-1">
                     {point}
