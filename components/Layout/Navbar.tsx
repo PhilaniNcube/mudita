@@ -7,6 +7,8 @@ import { HiMenu } from "react-icons/hi";
 
 const Navbar = () => {
 
+  const url = "http://localhost:3000/"
+
   const [open, setOpen] = useState(false)
 
   const router = useRouter()
@@ -15,24 +17,24 @@ const Navbar = () => {
     {
       title: "Home",
       href: "/",
-      active: router.asPath === "/",
+      active: router.asPath === "/#",
     },
 
     {
       title: "About Us",
-      href: "/about",
-      active: router.asPath === "/about",
+      href: "#about",
+      active: router.asPath === "#about",
     },
     {
       title: "Promise",
-      href: "/promise",
-      active: router.asPath === "/promise",
+      href: "#promise",
+      active: router.asPath === "#promise",
     },
   ];
 
 
   return (
-    <header className="z-20 py-2 foont-serif">
+    <header className="py-2 font-serif sticky backdrop-blur inset-0 z-30">
       {/**Desktop Navigation Starts**/}
       <nav className="hidden md:flex max-w-7xl mx-auto px-4 justify-between items-center">
         <Link href="/">
@@ -59,8 +61,8 @@ const Navbar = () => {
                   <motion.a
                     layout
                     transition={{ duration: 0.3 }}
-                    className={`uppercase font-bold font-serif transition-all duration-500 ${
-                      item.active ? "text-brand-main" : "text-gray-400"
+                    className={`uppercase font-bold font-serif active:text-brand-main  transition-all duration-500 ${
+                      item.active ? "text-brand-main" : "text-brand-main"
                     }`}
                   >
                     {item.title}

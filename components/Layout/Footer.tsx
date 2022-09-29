@@ -22,9 +22,9 @@ const Footer = () => {
           </Link>
 
           <div className="flex flex-col font-serif font-bold">
-            <Link href="/"><a>Home</a></Link>
-            <Link href="/about"><a>About Us</a></Link>
-            <Link href="/promise"><a>Our Promise</a></Link>
+            <Link href="#"><a>Home</a></Link>
+            <Link href="#about"><a>About Us</a></Link>
+            <Link href="#promise"><a>Our Promise</a></Link>
           </div>
 
           <div className="">

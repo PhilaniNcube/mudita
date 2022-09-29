@@ -4,7 +4,7 @@ import {Fragment} from 'react'
 const TopSection = () => {
   return (
     <Fragment>
-      <section className="pt-16 pb-12">
+      <section className="pt-16 pb-12" id="about">
         <div className="max-w-7xl mx-auto py-4 px-4 grid grid-cols-2 gap-8 md:gap-x-12 lg:gap-x-28">
           <div className="flex flex-col justify-between">
             {" "}
@@ -16,7 +16,7 @@ const TopSection = () => {
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-800">
               Project <span className="text-brand-main lowercase">Mission</span>{" "}
             </h1>
-            <p className="text-lg md:text-xl lg:text-[1.45rem] leading-8 font-medium mt-4 text-gray-600 text-justify">
+            <p className="text-lg md:text-xl lg:text-[1.4rem] leading-8 font-medium mt-4 text-gray-700 text-justify">
               We have been friends for almost a decade, studying, traveling and
               going on many adventures together. Growing up with very different
               cultural backgrounds (German and South African) we have learned to

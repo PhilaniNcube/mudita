@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-@apply font-serif;
+html,body {
+@apply font-serif scroll-smooth;
+
 }
 
 h1 {
