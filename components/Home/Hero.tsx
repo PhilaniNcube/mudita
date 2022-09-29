@@ -40,15 +40,19 @@ const Hero = () => {
           <div className="mx-auto max-w-7xl px-4 h-full">
             <div className="grid grid-cols-2 gap-2">
               <div className="w-full h-full flex flex-col justify-center pr-6">
-                <h1 className="text-3xl md:text-5xl lg:text-[5rem] text-slate-800">
+                <h1 className="text-3xl md:text-5xl lg:text-[4rem] leading-5 text-slate-800">
                   Finding joy in the <br />
-                  <span className="text-brand-main font-bold">
+                  <span className="text-brand-main md:text-6xl lg:text-[5rem] font-bold">
                     success of others
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-800 mt-4">
                   We understand that every person has diffrent needs, this is why we offer a holistic approach to each individuals needs.
                 </p>
+                <Link href="/about">
+                <a className="w-fit px-12 py-2 text-lg bg-brand-main font-serif font-bold my-3 text-white rounded-lg">Learn More</a>
+                  </Link>
+
               </div>
               <Image
                 src="/images/hero.png"
@@ -66,7 +70,7 @@ const Hero = () => {
           {notes.map((item, i) => (
             <div
               key={i}
-              className={`w-full shadow-lg flex flex-col px-5 py-10 rounded ${
+              className={`w-full shadow-lg flex flex-col font-serif px-5 py-10 rounded-xl aspect-square ${
                 i + (1 % 1) === 1
                   ? "bg-brand-light text-slate-50"
                   : "bg-brand-main text-slate-100"

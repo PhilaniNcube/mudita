@@ -32,7 +32,7 @@ const Navbar = () => {
 
 
   return (
-    <header className="z-20 py-2">
+    <header className="z-20 py-2 foont-serif">
       {/**Desktop Navigation Starts**/}
       <nav className="hidden md:flex max-w-7xl mx-auto px-4 justify-between items-center">
         <Link href="/">
@@ -59,7 +59,7 @@ const Navbar = () => {
                   <motion.a
                     layout
                     transition={{ duration: 0.3 }}
-                    className={`uppercase font-medium transition-all duration-500 ${
+                    className={`uppercase font-bold font-serif transition-all duration-500 ${
                       item.active ? "text-brand-main" : "text-gray-400"
                     }`}
                   >

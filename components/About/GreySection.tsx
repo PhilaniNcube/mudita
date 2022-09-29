@@ -118,7 +118,7 @@ const goals = [
   return (
     <section className="py-16 bg-slate-300">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="mb-4 text-3xl md:text-4xl font-serif font-bold text-gray-800 ">
+        <h2 className="mb-4 text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-800 ">
           Our <span className="text-brand-main">goals</span>
         </h2>
         <div className="grid grid-cols-4 py-4 gap-8">
