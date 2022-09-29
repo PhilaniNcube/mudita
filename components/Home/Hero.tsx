@@ -37,26 +37,26 @@ const Hero = () => {
     <Fragment>
       <section className="relative isolate bg-center bg-no-repeat bg-cover" style={{backgroundImage: 'url(/images/hero_bg.jpg)'}} >
         <div className="">
-          <div className="mx-auto max-w-7xl px-4 h-full">
-            <div className="grid grid-cols-2 gap-2">
+          <div className="mx-auto max-w-7xl px-4 py-16 md:py-2 h-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="w-full h-full flex flex-col justify-center pr-6">
-                <h1 className="text-3xl md:text-5xl lg:text-[4rem] leading-5 text-slate-800">
+                <h1 className="text-3xl md:text-5xl lg:text-[4rem] leading-7 text-slate-800">
                   Finding joy in the <br />
-                  <span className="text-brand-main md:text-6xl lg:text-[5rem] font-bold">
+                  <span className="text-brand-main text-4xl md:text-6xl lg:text-[5rem] font-bold">
                     success of others
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-800 mt-4">
                   We understand that every person has diffrent needs, this is why we offer a holistic approach to each individuals needs.
                 </p>
-                <Link href="/about">
-                <a className="w-fit px-12 py-2 text-lg bg-brand-main font-serif font-bold my-3 text-white rounded-lg">Learn More</a>
+                <Link href="#about">
+                <div className="text-center min-w-[200px] w-1/2 max-w-2xl py-2 text-lg bg-brand-main font-serif font-bold my-3 text-white rounded-lg">Learn More</div>
                   </Link>
 
               </div>
               <Image
                 src="/images/hero.png"
-                className="w-full aspect-square object-cover"
+                className="w-full hidden md:block aspect-square object-cover"
                 width={1000}
                 height={1000}
                 alt="background"
@@ -65,7 +65,7 @@ const Hero = () => {
           </div>
         </div>
       </section>
-      <section className="-translate-y-8 md:-translate-y-28">
+      <section className=" md:-translate-y-28">
         <div className="grid max-w-7xl mx-auto px-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
           {notes.map((item, i) => (
             <div

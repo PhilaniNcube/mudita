@@ -121,7 +121,7 @@ const goals = [
         <h2 className="mb-4 text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-800 ">
           Our <span className="text-brand-main">goals</span>
         </h2>
-        <div className="grid grid-cols-4 py-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 py-4 gap-8">
           {goals.map((goal, i) => (
             <div
               key={i}

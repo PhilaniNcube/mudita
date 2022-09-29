@@ -5,7 +5,7 @@ const TopSection = () => {
   return (
     <Fragment>
       <section className="pt-16 pb-12" id="about">
-        <div className="max-w-7xl mx-auto py-4 px-4 grid grid-cols-2 gap-8 md:gap-x-12 lg:gap-x-28">
+        <div className="max-w-7xl mx-auto py-4 px-4 grid gird-cols-1 md:grid-cols-2 gap-8 md:gap-x-12 lg:gap-x-28">
           <div className="flex flex-col justify-between">
             {" "}
             <div className="text-slate-700 flex space-x-3 items-center">
