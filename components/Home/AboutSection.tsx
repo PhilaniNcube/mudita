@@ -39,7 +39,7 @@ const AboutSection = () => {
             welcomed and supported.
           </p>
 
-          <Link href="/promise">
+          <Link href="#promise">
             <a className="bg-teal-700 mt-4 text-white text-xl uppercase font-medium px-6 py-2 rounded-tl-3xl rounded-br-3xl">
               Contact
             </a>

@@ -7,6 +7,7 @@ import Hero from '../components/Home/Hero'
 import Services from '../components/Home/Services'
 import TopSection from '../components/About/TopSection';
 import GreySection from '../components/About/GreySection';
+import Contact from '../components/Home/Contact';
 
 const Home: NextPage = () => {
   return (
@@ -20,7 +21,7 @@ const Home: NextPage = () => {
         <Hero />
         <TopSection />
         <GreySection />
-        <main id="promise">
+        <section id="promise">
           <div className="max-w-7xl mx-auto px-4 py-24">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="w-full md:pl-6 py-3">
@@ -47,7 +48,8 @@ const Home: NextPage = () => {
               />
             </div>
           </div>
-        </main>
+        </section>
+        <Contact />
       </main>
     </Fragment>
   );

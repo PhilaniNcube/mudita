@@ -42,7 +42,8 @@ const Hero = () => {
               <div className="w-full h-full flex flex-col justify-center pr-6">
                 <h1 className="text-3xl md:text-5xl lg:text-[4rem] leading-7 text-slate-800">
                   Finding joy in the <br />
-                  <span className="text-brand-main text-4xl md:text-6xl lg:text-[5rem] font-bold">
+                  <span className="text-brand-main text-4xlnpm run dev
+                   md:text-6xl lg:text-[5rem] font-bold">
                     success of others
                   </span>
                 </h1>
@@ -113,7 +114,7 @@ const Hero = () => {
                 through education and also providing a safe supportive
                 environment.
               </p>
-              <Link href="/about">
+              <Link href="#about">
                 <a className="px-8  py-2 bg-brand-main text-gray-100 hover:bg-slate-600 transition-all duration-300 cursor-pointer font-medium uppercase mt-8">
                   Learn More
                 </a>

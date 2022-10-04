@@ -30,6 +30,11 @@ const Navbar = () => {
       href: "#promise",
       active: router.asPath === "#promise",
     },
+    {
+      title: "Contact",
+      href: "#contact",
+      active: router.asPath === "#contact",
+    },
   ];
 
 
