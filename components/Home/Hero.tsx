@@ -48,7 +48,7 @@ const Hero = () => {
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-800 mt-4">
-                  We understand that every person has diffrent needs, this is why we offer a holistic approach to each individuals needs.
+                  We understand that every person has different needs, this is why we offer a holistic approach to each individuals needs.
                 </p>
                 <Link href="#about">
                 <div className="text-center min-w-[200px] w-1/2 max-w-2xl py-2 text-lg bg-brand-main font-serif font-bold my-3 text-white rounded-lg">Learn More</div>
@@ -56,9 +56,9 @@ const Hero = () => {
 
               </div>
               <Image
-                src="/images/hero.png"
+                src="/images/reach_out.png"
                 className="w-full hidden md:block aspect-square object-cover"
-                width={1000}
+                width={986}
                 height={1000}
                 alt="background"
               />
@@ -88,6 +88,9 @@ const Hero = () => {
               </ul>
             </div>
           ))}
+        </div>
+        <div className="flex my-16 justify-center items-center">
+          <button className="max-w-2xl py-2 rounded-lg bg-brand-main text-white px-6 text-xl uppercase font-bold" >Get In Touch</button>
         </div>
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-2">

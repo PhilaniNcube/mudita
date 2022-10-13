@@ -1,15 +1,19 @@
-import {Fragment} from 'react';
+import {Fragment, useState} from 'react';
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import AboutSection from '../components/Home/AboutSection'
 import Hero from '../components/Home/Hero'
-import Services from '../components/Home/Services'
 import TopSection from '../components/About/TopSection';
 import GreySection from '../components/About/GreySection';
 import Contact from '../components/Home/Contact';
+import { AnimatePresence } from 'framer-motion';
+import ContactForm from '../components/Home/ContactForm';
 
 const Home: NextPage = () => {
+
+  const [show, setShow] = useState(false)
+
+
   return (
     <Fragment>
       <Head>
@@ -21,6 +25,7 @@ const Home: NextPage = () => {
         <Hero />
         <TopSection />
         <GreySection />
+
         <section id="promise">
           <div className="max-w-7xl mx-auto px-4 py-24">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -49,6 +54,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+        <ContactForm />
         <Contact />
       </main>
     </Fragment>
