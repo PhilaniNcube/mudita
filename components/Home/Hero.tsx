@@ -40,7 +40,7 @@ const Hero = () => {
         style={{ backgroundImage: "url(/images/hero_bg.jpg)" }}
       >
         <div className="">
-          <div className="mx-auto max-w-7xl px-4 py-16 md:py-2 h-full">
+          <div className="mx-auto max-w-7xl px-4 py-16 md:py-2 min-h-[65vh] h-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="w-full h-full flex flex-col justify-center pr-6">
                 <h1 className="text-3xl md:text-5xl lg:text-[4rem] leading-7 text-slate-800">
@@ -62,7 +62,7 @@ const Hero = () => {
                   </div>
                 </Link>
               </div>
-              
+
             </div>
           </div>
         </div>
