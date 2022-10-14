@@ -62,13 +62,7 @@ const Hero = () => {
                   </div>
                 </Link>
               </div>
-              <Image
-                src="/images/reach_out.png"
-                className="w-full hidden md:block aspect-square object-cover"
-                width={986}
-                height={1000}
-                alt="background"
-              />
+              
             </div>
           </div>
         </div>
