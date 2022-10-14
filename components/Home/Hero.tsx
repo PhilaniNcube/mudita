@@ -35,25 +35,32 @@ const Hero = () => {
 
   return (
     <Fragment>
-      <section className="relative isolate bg-center bg-no-repeat bg-cover" style={{backgroundImage: 'url(/images/hero_bg.jpg)'}} >
+      <section
+        className="relative isolate bg-center bg-no-repeat bg-cover"
+        style={{ backgroundImage: "url(/images/hero_bg.jpg)" }}
+      >
         <div className="">
           <div className="mx-auto max-w-7xl px-4 py-16 md:py-2 h-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="w-full h-full flex flex-col justify-center pr-6">
                 <h1 className="text-3xl md:text-5xl lg:text-[4rem] leading-7 text-slate-800">
                   Finding joy in the <br />
-                  <span className="text-brand-main text-4xlnpm run dev
-                   md:text-6xl lg:text-[5rem] font-bold">
+                  <span
+                    className="text-brand-main text-4xlnpm run dev
+                   md:text-6xl lg:text-[5rem] font-bold"
+                  >
                     success of others
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-800 mt-4">
-                  We understand that every person has different needs, this is why we offer a holistic approach to each individuals needs.
+                  We understand that every person has different needs, this is
+                  why we offer a holistic approach to each individuals needs.
                 </p>
                 <Link href="#about">
-                <div className="text-center min-w-[200px] w-1/2 max-w-2xl py-2 text-lg bg-brand-main font-serif font-bold my-3 text-white rounded-lg">Learn More</div>
-                  </Link>
-
+                  <div className="text-center min-w-[200px] w-1/2 max-w-2xl py-2 text-lg bg-brand-main font-serif font-bold my-3 text-white rounded-lg">
+                    Learn More
+                  </div>
+                </Link>
               </div>
               <Image
                 src="/images/reach_out.png"
@@ -90,7 +97,11 @@ const Hero = () => {
           ))}
         </div>
         <div className="flex my-16 justify-center items-center">
-          <button className="max-w-2xl py-2 rounded-lg bg-brand-main text-white px-6 text-xl uppercase font-bold" >Get In Touch</button>
+          <Link href="#contact_form">
+            <button className="max-w-2xl py-2 rounded-lg bg-brand-main text-white px-6 text-xl uppercase font-bold">
+              Get In Touch
+            </button>
+          </Link>
         </div>
         <div className="max-w-7xl mx-auto px-4 py-16">
           <div className="grid grid-cols-2">
