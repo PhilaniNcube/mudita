@@ -8,8 +8,14 @@ import GreySection from '../components/About/GreySection';
 import Contact from '../components/Home/Contact';
 import { AnimatePresence } from 'framer-motion';
 import ContactForm from '../components/Home/ContactForm';
+import heroSection from '../lib/hero';
+import client from '../lib/contentful';
 
-const Home: NextPage = () => {
+type ComponentProps = {
+  heroData:HeroData,
+}
+
+const Home = ({heroData}:ComponentProps) => {
 
   const [show, setShow] = useState(false)
 
@@ -22,7 +28,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Hero />
+        <Hero heroData={heroData} />
         <TopSection />
         <GreySection />
 
@@ -62,3 +68,19 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+
+export async function getServerSideProps() {
+    const heroData = await client
+      .getEntry("IQmCyjxK4buckNLeC1h14")
+      .then((entry) => entry)
+      .catch(console.error);
+
+
+
+    return {
+      props: {
+        heroData
+      }
+    }
+}

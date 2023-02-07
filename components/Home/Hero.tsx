@@ -1,8 +1,17 @@
 import {Fragment} from 'react'
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
+// import heroSection from '../../lib/hero';
 
-const Hero = () => {
+type ComponentProps = {
+  heroData: HeroData;
+};
+
+const Hero = ({heroData}:ComponentProps) => {
+
+
+
+  console.log(heroData)
 
   const notes = [
     {
@@ -37,32 +46,31 @@ const Hero = () => {
     <Fragment>
       <section
         className="relative isolate bg-center bg-no-repeat bg-cover"
-        style={{ backgroundImage: "url(/images/hero_bg.jpg)" }}
+        style={{ backgroundImage: `url(${heroData.fields.backgroundImage.fields.file.url})` }}
       >
         <div className="">
           <div className="mx-auto max-w-7xl px-4 py-16 md:py-2 min-h-[65vh] h-full">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="w-full h-full flex flex-col justify-center pr-6">
                 <h1 className="text-3xl md:text-5xl lg:text-[4rem] leading-7 text-slate-800">
-                  Finding joy in the <br />
+                  {heroData.fields.title} <br />
                   <span
-                    className="text-brand-main text-4xlnpm run dev
+                    className="text-brand-main text-4xl
                    md:text-6xl lg:text-[5rem] font-bold"
                   >
-                    success of others
+                    {heroData.fields.boldTitle}
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-800 mt-4">
-                  We understand that every person has different needs, this is
-                  why we offer a holistic approach to each individuals needs.
+                {heroData.fields.subTitle}
                 </p>
-                <Link href="#about">
-                  <div className="text-center min-w-[200px] w-1/2 max-w-2xl py-2 text-lg bg-brand-main font-serif font-bold my-3 text-white rounded-lg">
-                    Learn More
-                  </div>
+                <Link
+                  href="#about"
+                  className="text-center min-w-[200px] w-1/2 max-w-2xl py-2 text-lg bg-brand-main font-serif font-bold my-3 text-white rounded-lg"
+                >
+                  Learn More
                 </Link>
               </div>
-
             </div>
           </div>
         </div>
@@ -122,10 +130,11 @@ const Hero = () => {
                 through education and also providing a safe supportive
                 environment.
               </p>
-              <Link href="#about">
-                <a className="px-8  py-2 bg-brand-main text-gray-100 hover:bg-slate-600 transition-all duration-300 cursor-pointer font-medium uppercase mt-8">
-                  Learn More
-                </a>
+              <Link
+                href="#about"
+                className="px-8  py-2 bg-brand-main text-gray-100 hover:bg-slate-600 transition-all duration-300 cursor-pointer font-medium uppercase mt-8"
+              >
+               Learn More
               </Link>
             </div>
           </div>

@@ -2,7 +2,7 @@ import {useState} from "react"
 import Link from "next/link";
 import {motion, AnimatePresence} from 'framer-motion'
 import { useRouter } from "next/router";
-import Image from "next/future/image";
+import Image from "next/image";
 import { HiMenu } from "react-icons/hi";
 
 const Navbar = () => {
@@ -95,7 +95,7 @@ const Navbar = () => {
           onClick={() => setOpen(true)}
           className="h-12 w-12 text-gray-600"
         />
-        <AnimatePresence exitBeforeEnter initial={false}>
+        <AnimatePresence mode="wait" initial={false}>
           {open && (
             <motion.div
               className="w-full z-30 h-screen items-center list-none bg-slate-700 p-8 flex flex-col justify-around absolute inset-0"

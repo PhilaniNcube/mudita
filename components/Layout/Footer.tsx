@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -22,14 +22,24 @@ const Footer = () => {
           </Link>
 
           <div className="flex flex-col font-serif font-bold">
-            <Link href="#"><a>Home</a></Link>
-            <Link href="#about"><a>About Us</a></Link>
-            <Link href="#promise"><a>Our Promise</a></Link>
+            <Link href="#">Home</Link>
+            <Link href="#about">About Us</Link>
+            <Link href="#promise">Our Promise</Link>
           </div>
 
           <div className="">
-            <p className="text-sm md:text-md text-slate-800">Copyright &copy; {year}</p>
-            <p className="text-sm md:text-md text-slate-800">Developed by <Link href="https://athenamedia.co.za"><a className="font-bold cursor-pointer">Athena Media</a></Link></p>
+            <p className="text-sm md:text-md text-slate-800">
+              Copyright &copy; {year}
+            </p>
+            <p className="text-sm md:text-md text-slate-800">
+              Developed by{" "}
+              <Link
+                href="https://athenamedia.co.za"
+                className="font-bold cursor-pointer"
+              >
+                Athena Media
+              </Link>
+            </p>
           </div>
         </div>
       </div>
