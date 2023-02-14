@@ -8,5 +8,12 @@ const heroSection = async () => {
 return data
 }
 
+export const contentBoxesOne = async () => {
+ let data =  client.getContentType('contentBoxes')
+.then((contentType) => console.log(contentType))
+.catch(console.error)
+
+return data
+}
 
 export default heroSection

@@ -1,7 +1,16 @@
 import Image from 'next/image';
 import {Fragment} from 'react'
 
-const TopSection = () => {
+type ComponentProps = {
+
+  mission?: {
+    title: string;
+    subTitle: string;
+    description: string;
+  };
+};
+
+const TopSection = ({mission}: ComponentProps) => {
   return (
     <Fragment>
       <section className="pt-16 pb-12" id="about">

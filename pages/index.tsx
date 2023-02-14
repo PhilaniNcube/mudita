@@ -12,13 +12,22 @@ import heroSection from '../lib/hero';
 import client from '../lib/contentful';
 
 type ComponentProps = {
-  heroData:HeroData,
-}
+  heroData: HeroData;
+  contentBoxes?: {
+    title: string;
+    list: string[]
+  }[],
+  mission?: {
+    title: string;
+    subTitle: string;
+    description: string;
+  }
+};
 
-const Home = ({heroData}:ComponentProps) => {
+const Home = ({ heroData, contentBoxes, mission }: ComponentProps) => {
+  const [show, setShow] = useState(false);
 
-  const [show, setShow] = useState(false)
-
+  console.log({ mission });
 
   return (
     <Fragment>
@@ -28,8 +37,8 @@ const Home = ({heroData}:ComponentProps) => {
       </Head>
 
       <main>
-        <Hero heroData={heroData} />
-        <TopSection />
+        <Hero heroData={heroData} contentBoxes={contentBoxes} mission={mission} />
+        <TopSection mission={mission} />
         <GreySection />
 
         <section id="promise">
@@ -65,7 +74,7 @@ const Home = ({heroData}:ComponentProps) => {
       </main>
     </Fragment>
   );
-}
+};
 
 export default Home
 
@@ -76,11 +85,24 @@ export async function getServerSideProps() {
       .then((entry) => entry)
       .catch(console.error);
 
+const box1 = await (await client.getEntry("3IjAhdc2gYMdTuQpmtgwkq")).fields
+
+
+  const box2 = await (await client.getEntry("1hNWthMKkBh8wAdMtbYo5F")).fields
+
+
+    const box3 = await (await client.getEntry("14KKZ5I5vfXDPmDRDeCJ0h")).fields
+
+ const mission = await (await client.getEntry("6UR3504b68oA9gfOq18rNF")).fields
+
+
 
 
     return {
       props: {
-        heroData
-      }
-    }
+        heroData,
+        contentBoxes: [box1, box2, box3],
+        mission,
+      },
+    };
 }
