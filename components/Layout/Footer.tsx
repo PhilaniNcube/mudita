@@ -18,7 +18,10 @@ const Footer = () => {
               height={289.9}
               alt="logo"
               className="w-28 md:w-44 lg:w-52 object-cover"
-            />
+            />{" "}
+            <p className="text-sm md:text-md text-slate-800 font-bold">
+              South Africa NPO #: 284-035-NPO
+            </p>
           </Link>
 
           <div className="flex flex-col font-serif font-bold">
@@ -28,9 +31,6 @@ const Footer = () => {
           </div>
 
           <div className="">
-            <p className="text-sm md:text-md text-slate-800 font-bold">
-              South Africa NPO #: 284-035-NPO
-            </p>
             <p className="text-sm md:text-md text-slate-800">
               Copyright &copy; {year}
             </p>
