@@ -28,6 +28,9 @@ const Footer = () => {
           </div>
 
           <div className="">
+            <p className="text-sm md:text-md text-slate-800 font-bold">
+              South Africa NPO #: 284-035-NPO
+            </p>
             <p className="text-sm md:text-md text-slate-800">
               Copyright &copy; {year}
             </p>
