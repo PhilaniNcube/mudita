@@ -6,28 +6,37 @@ import Hero from '../components/Home/Hero'
 import TopSection from '../components/About/TopSection';
 import GreySection from '../components/About/GreySection';
 import Contact from '../components/Home/Contact';
-import { AnimatePresence } from 'framer-motion';
 import ContactForm from '../components/Home/ContactForm';
-import heroSection from '../lib/hero';
+import heroSection, { Goals, ProjectMission, PromisesType, getPromise, goals, projectMission } from '../lib/hero';
 import client from '../lib/contentful';
 
 type ComponentProps = {
   heroData: HeroData;
   contentBoxes?: {
     title: string;
-    list: string[]
-  }[],
+    list: string[];
+  }[];
   mission?: {
     title: string;
     subTitle: string;
     description: string;
-  }
+  };
+  projectMissionData: ProjectMission;
+  goalsData: Goals[];
+  ourPromise:PromisesType;
 };
 
-const Home = ({ heroData, contentBoxes, mission }: ComponentProps) => {
+const Home = ({
+  heroData,
+  contentBoxes,
+  mission,
+  projectMissionData,
+  goalsData,
+  ourPromise,
+}: ComponentProps) => {
   const [show, setShow] = useState(false);
 
-  console.log({ mission });
+  console.log({ ourPromise });
 
   return (
     <Fragment>
@@ -37,33 +46,32 @@ const Home = ({ heroData, contentBoxes, mission }: ComponentProps) => {
       </Head>
 
       <main>
-        <Hero heroData={heroData} contentBoxes={contentBoxes} mission={mission} />
-        <TopSection mission={mission} />
-        <GreySection />
+        <Hero
+          heroData={heroData}
+          contentBoxes={contentBoxes}
+          mission={mission}
+        />
+        <TopSection projectMission={projectMissionData} />
+        <GreySection goals={goalsData} />
 
         <section id="promise">
           <div className="max-w-7xl mx-auto px-4 py-24">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className="w-full md:pl-6 py-3">
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold  text-slate-800">
-                  Our
-                  <span className="text-brand-main lowercase"> Promise</span>
+                  <span className="text-brand-main lowercase">
+                    {ourPromise.title}
+                  </span>
                 </h1>{" "}
                 <p className="text-lg md:text-[1.4rem] font-medium mt-4 text-gray-700">
-                  We understand that every person has different needs this is
-                  why we offer a holistic approach to each individuals needs.
-                </p>
-                <p className="text-lg md:text-[1.4rem] mt-4 text-gray-700">
-                  The only thing we ask is that you pledge to be happy for the
-                  success of your fellow Mudita family and when you do succeed
-                  to help us help others.
+                  {ourPromise.text}
                 </p>
               </div>{" "}
               <Image
                 alt="friends"
-                src="/images/promise.jpg"
-                width={4000}
-                height={4000}
+                src={`https:${ourPromise.image.fields.file.url}`}
+                width={ourPromise.image.fields.file.details.image.width}
+                height={ourPromise.image.fields.file.details.image.height}
                 className="w-full aspect-1 col-span-2 md:col-span-1 object-cover "
               />
             </div>
@@ -95,6 +103,11 @@ const box1 = await (await client.getEntry("3IjAhdc2gYMdTuQpmtgwkq")).fields
 
  const mission = await (await client.getEntry("6UR3504b68oA9gfOq18rNF")).fields
 
+ const projectMissionData = await projectMission();
+ const goalsData = await goals();
+
+  const ourPromise = await getPromise()
+
 
 
 
@@ -103,6 +116,9 @@ const box1 = await (await client.getEntry("3IjAhdc2gYMdTuQpmtgwkq")).fields
         heroData,
         contentBoxes: [box1, box2, box3],
         mission,
+        projectMissionData,
+        goalsData,
+        ourPromise,
       },
     };
 }

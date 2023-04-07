@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import {Fragment} from 'react'
+import { ProjectMission } from '../../lib/hero';
 
 type ComponentProps = {
-
-  mission?: {
-    title: string;
-    subTitle: string;
-    description: string;
-  };
+  projectMission: ProjectMission;
 };
 
-const TopSection = ({mission}: ComponentProps) => {
+const TopSection = ({projectMission}: ComponentProps) => {
+
+
+
+
   return (
     <Fragment>
       <section className="pt-16 pb-12" id="about">
@@ -23,27 +23,15 @@ const TopSection = ({mission}: ComponentProps) => {
               </p>{" "}
             </div>{" "}
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate-800">
-              Project <span className="text-brand-main lowercase">Mission</span>{" "}
+             {projectMission.fields.title}
             </h1>
             <p className="text-lg md:text-xl lg:text-[1.4rem] leading-8 font-medium mt-4 text-gray-700 text-justify">
-              We have been friends for almost a decade, studying, traveling and
-              going on many adventures together. Growing up with very different
-              cultural backgrounds (German and South African) we have learned to
-              truly embrace people as they are. As this beautiful friendship
-              grew we realised the key to growth is having the support needed to
-              thrive and that we became better when we both supported each other
-              unconditionally. This created an environment that made us feel
-              like we could accomplish anything we want. Working together in
-              some of the harshest medical environments we quickly learnt that
-              the world is very unfair. Our Mission is to try and make it a
-              little more equal for everyone. This is why we want to support
-              marginalised groups by creating a safe support sanctuary where
-              everyone feels welcomed and supported.{" "}
+             {projectMission.fields.text}
             </p>
           </div>
           <div className="h-full">
             <Image
-              src="/images/lena.jpg"
+              src={`https:${projectMission.fields.image.fields.file.url}`}
               width={1200}
               height={1436}
               alt="Friends"
